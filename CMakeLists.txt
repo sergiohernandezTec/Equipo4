@@ -5,4 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Equipo4 main.cpp
         Tienda.cpp
-        Tienda.h)
+        Tienda.h
+        Cliente.cpp
+        Cliente.h
+        Empleado.cpp
+        Empleado.h)
