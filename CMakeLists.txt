@@ -9,5 +9,20 @@ add_executable(ProyectoProgra
     Persona.cpp
     Persona.h
         Producto.h
-        Producto.cpp)
+        Producto.cpp
+        "main (2).cpp"
+        Factura.h
+        Factura.cpp
+Cliente.cpp
+Cliente.h
+Empleado.cpp
+Empleado.h
+Reporte.h
+Reporte.cpp
+Tienda.h
+Tienda.cpp
+Venta.h
+Venta.cpp
+Turno.h
+Turno.cpp)
 
