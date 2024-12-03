@@ -2,7 +2,7 @@
 #include "Empleado.h"
 
 Empleado::Empleado(int idEmpleado, string nombreEmpleado, float sueldoEmpleado, string horarioEmpleado, string areaEmpleado)
-    : Persona(idEmpleado, nombreEmpleado) {
+    :Persona(idEmpleado, nombreEmpleado) {
     sueldo = sueldoEmpleado;
     horario = horarioEmpleado;
     area = areaEmpleado;

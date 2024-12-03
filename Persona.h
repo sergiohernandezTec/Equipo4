@@ -5,7 +5,6 @@ using namespace std;
 
 class Persona {
 public:
-    Persona();
     int id;
     string nombre;
     Persona(int idPersona, string nombrePersona);
