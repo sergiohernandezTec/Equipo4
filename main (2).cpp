@@ -7,7 +7,7 @@ int main() {
     Tienda tienda;
     int opcion = 0;
 
-    while (opcion != 10) {
+    while (opcion != 13) {
         cout << "Menu de Tienda Departamental" << endl;
         cout << "1. Agregar Producto" << endl;
         cout << "2. Mostrar Productos" << endl;
@@ -18,7 +18,11 @@ int main() {
         cout << "7. Registrar Venta" << endl;
         cout << "8. Generar Facturas" << endl;
         cout << "9. Generar Reporte de Ventas" << endl;
-        cout << "10. Salir" << endl;
+        cout << "10. Cambiar Horario de Empleado" << endl;
+        cout << "11. Despedir Empleado" << endl;
+        cout << "12. Mostrar Turnos" << endl;
+        cout << "13. Salir" << endl;
+        cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         if (opcion == 1) {
@@ -40,9 +44,17 @@ int main() {
         } else if (opcion == 9) {
             tienda.generarReporte();
         } else if (opcion == 10) {
+            tienda.cambiarHorarioEmpleado();
+        } else if (opcion == 11) {
+            tienda.despedirEmpleado();
+        } else if (opcion == 12) {
+            tienda.mostrarTurnos();
+        } else if (opcion == 13) {
             cout << "Gracias por usar el sistema de la tienda." << endl;
         } else {
             cout << "Opción no válida. Intente nuevamente." << endl;
+            cin.clear();
+            cin.ignore();
         }
     }
 
