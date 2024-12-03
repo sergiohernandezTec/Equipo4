@@ -1,25 +1,21 @@
-//
-// Created by logra on 02/12/2024.
-//
 
 #include "Empleado.h"
 
-Empleado::Empleado(int idEmpleado, string nombreEmpleado, float sueldoEmpleado, string horarioEmpleado) {
-    id = idEmpleado;
-    nombre = nombreEmpleado;
+Empleado::Empleado(int idEmpleado, string nombreEmpleado, float sueldoEmpleado, string horarioEmpleado, string areaEmpleado)
+    : Persona(idEmpleado, nombreEmpleado) {
     sueldo = sueldoEmpleado;
     horario = horarioEmpleado;
+    area = areaEmpleado;
 }
 
-Empleado::Empleado() {
-    id = 0;
-    nombre = "";
-    sueldo = 0;
+Empleado::Empleado() : Persona() {
+    sueldo = 0.0;
     horario = "";
+    area = "";
 }
 
-void Empleado::mostrarEmpleado() {
+void Empleado::mostrarInformacion() {
     cout << "ID: " << id << ", Nombre: " << nombre
-         << ", Sueldo: $" << sueldo << ", Horario: " << horario << endl;
+         << ", Sueldo: $" << sueldo << ", Horario: " << horario
+         << ", Área: " << area << endl;
 }
-

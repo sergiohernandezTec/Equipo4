@@ -1,24 +1,18 @@
-//
-// Created by logra on 02/12/2024.
-//
-
 #ifndef EMPLEADO_H
 #define EMPLEADO_H
-
+#include "Persona.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
-class Empleado {
+class Empleado:public Persona{
 public:
-    int id;
-    string nombre;
     float sueldo;
     string horario;
-
-    Empleado(int idEmpleado, string nombreEmpleado, float sueldoEmpleado, string horarioEmpleado);
+    string area;
+    Empleado(int idEmpleado, string nombreEmpleado, float sueldoEmpleado, string horarioEmpleado, string areaEmpleado);
     Empleado();
-    void mostrarEmpleado();
+    void mostrarInformacion() override;
 };
 
 #endif

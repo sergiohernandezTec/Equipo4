@@ -9,4 +9,14 @@ add_executable(Equipo4 main.cpp
         Cliente.cpp
         Cliente.h
         Empleado.cpp
-        Empleado.h)
+        Empleado.h
+        Persona.cpp
+        Persona.h
+        Venta.cpp
+        Venta.h
+        Turno.cpp
+        Turno.h
+        Factura.cpp
+        Factura.h
+        Reporte.cpp
+        Reporte.h)

@@ -4,7 +4,9 @@
 #include "Cliente.h"
 #include "Empleado.h"
 #include "Producto.h"
-#include "Venta.h"
+#include "Factura.h"
+#include "Turno.h"
+#include "Reporte.h"
 using namespace std;
 
 
@@ -13,18 +15,21 @@ private:
     vector<Producto> productos;
     vector<Cliente> clientes;
     vector<Empleado> empleados;
-    vector<Venta> ventas;
+    vector<Factura> facturas;
+    vector<Turno> turnos;
+    int idFactura = 1;
 public:
     void agregarProducto();
     void mostrarProductos();
-    void buscarPorCategoria();
-    void agregarCliente();
+    void registrarCliente();
     void listarClientes();
-    void buscarCliente();
     void contratarEmpleado();
     void listarEmpleados();
     void registrarVenta();
-    void mostrarVentas();
+    void generarFacturas();
+    void generarReporte();
+    void asignarTurno();
+    void mostrarTurnos();
 };
 
 

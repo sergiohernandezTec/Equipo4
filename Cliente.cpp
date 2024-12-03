@@ -4,15 +4,12 @@
 
 #include "Cliente.h"
 
-Cliente::Cliente(int idCliente, string nombreCliente, string direccionCliente) {
-    id = idCliente;
-    nombre = nombreCliente;
+Cliente::Cliente(int idCliente, string nombreCliente, string direccionCliente)
+        : Persona(idCliente, nombreCliente) {
     direccion = direccionCliente;
 }
 
-Cliente::Cliente() {
-    id = 0;
-    nombre = "";
+Cliente::Cliente() : Persona() {
     direccion = "";
 }
 
@@ -20,10 +17,14 @@ void Cliente::agregarCompra(string compra) {
     historialCompras.push_back(compra);
 }
 
-void Cliente::mostrarCliente() {
+void Cliente::mostrarInformacion(){
     cout << "ID: " << id << ", Nombre: " << nombre << ", Dirección: " << direccion << endl;
-    cout << "Historial de Compras:" << endl;
-    for (const string& compra : historialCompras) {
-        cout << "  - " << compra << endl;
+    if (historialCompras.empty()) {
+        cout << "Sin historial de compras." << endl;
+    } else {
+        cout << "Historial de Compras:" << endl;
+        for (string compra : historialCompras) {
+            cout << "- " << compra << endl;
+        }
     }
 }
